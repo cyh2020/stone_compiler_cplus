@@ -14,7 +14,7 @@ class PrimaryExpr : public ASTList{
         PrimaryExpr(list<ASTNode*> c);
         virtual ~PrimaryExpr();
 
-        ASTNode* create(list<ASTNode*> c);
+//        ASTNode* create(list<ASTNode*> c);
         ReturnType* eval(Environment& env);
 
 };

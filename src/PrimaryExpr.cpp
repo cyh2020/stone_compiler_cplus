@@ -12,9 +12,9 @@ PrimaryExpr::~PrimaryExpr()
 }
 
 
-ASTNode* PrimaryExpr::create(list<ASTNode*> c) {
-        return (c.size() == 1) ? c.front() : new PrimaryExpr(c);
-    }
+//ASTNode* PrimaryExpr::create(list<ASTNode*> c) {
+//        return (c.size() == 1) ? c.front() : new PrimaryExpr(c);
+//    }
 
 
 ReturnType* PrimaryExpr::eval(Environment& env) {

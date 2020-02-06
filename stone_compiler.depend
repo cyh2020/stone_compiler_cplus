@@ -693,3 +693,350 @@
 	"ReturnType.h"
 	"ReturnTypeInt.h"
 
+1580975053 source:e:\git_workspace\stone_compiler_cplus\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<list>
+	<Token.h>
+	<derivedTokens.h>
+	"lexer.h"
+	"LineNumberReader.h"
+	<regex>
+	"template/TSum.h"
+	"Parser.h"
+	"BasicParser.h"
+	"ReturnType.h"
+	"ReturnTypeInt.h"
+	"ReturnTypeString.h"
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\token.h
+	<string>
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\derivedtokens.h
+	"Token.h"
+	<string>
+	<sstream>
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\lexer.h
+	"lexer_one_line.h"
+	"Token.h"
+	"LineNumberReader.h"
+	<list>
+	<string>
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\lexer_one_line.h
+	<string>
+	<list>
+	"Token.h"
+	"derivedTokens.h"
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\linenumberreader.h
+	<iostream>
+	<fstream>
+	<string>
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\template\tsum.h
+
+1580973822 e:\git_workspace\stone_compiler_cplus\include\parser.h
+	<map>
+	<string>
+	<set>
+	<list>
+	<lexer.h>
+	<Token.h>
+	<ASTNode.h>
+	<ASTLeaf.h>
+	<ASTList.h>
+	<Factory.h>
+	<FactoryDerived.h>
+	<typeinfo>
+	"ParserClass.h"
+	"BinaryExpr.h"
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\astnode.h
+	<string>
+	"Environment.h"
+	"ReturnType.h"
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\environment.h
+	<map>
+	<string>
+	"ReturnType.h"
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\returntype.h
+	<string>
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\astleaf.h
+	<string>
+	<Token.h>
+	<ASTNode.h>
+	<list>
+	"ReturnType.h"
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\astlist.h
+	<string>
+	<Token.h>
+	<ASTNode.h>
+	<list>
+	"ReturnType.h"
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\factory.h
+	<string>
+	<lexer.h>
+	<Token.h>
+	<ASTNode.h>
+	<ASTLeaf.h>
+	<ASTList.h>
+	<list>
+	"PrimaryExpr.h"
+
+1580985874 e:\git_workspace\stone_compiler_cplus\include\primaryexpr.h
+	<ASTNode.h>
+	<ASTList.h>
+	<list>
+	"ReturnType.h"
+	"Environment.h"
+
+1580974959 e:\git_workspace\stone_compiler_cplus\include\factoryderived.h
+	<list>
+	<ASTNode.h>
+	"PrimaryExpr.h"
+	"Name.h"
+	"StringLiteral.h"
+	"NumberLiteral.h"
+	"Factory.h"
+	"Token.h"
+	"iostream"
+	"ordinary.h"
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\name.h
+	<ASTNode.h>
+	<ASTList.h>
+	<ASTLeaf.h>
+	<string>
+	"Environment.h"
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\stringliteral.h
+	"ASTLeaf.h"
+	"Environment.h"
+	"string"
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\numberliteral.h
+	"Environment.h"
+	<ASTLeaf.h>
+	<string>
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\ordinary.h
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\parserclass.h
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\binaryexpr.h
+	<ASTNode.h>
+	<ASTList.h>
+	<ASTLeaf.h>
+	<string>
+	"ReturnType.h"
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\basicparser.h
+	"lexer.h"
+	<Parser.h>
+	<ParserDerived.h>
+	<map>
+	<set>
+	<string>
+	"NegativeExpr.h"
+	"BinaryExpr.h"
+	"BlockStmnt.h"
+	"IfStmnt.h"
+	"WhileStmnt.h"
+	"NullStmnt.h"
+	"iostream"
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\parserderived.h
+	<Factory.h>
+	<FactoryDerived.h>
+	"Parser.h"
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\negativeexpr.h
+	<ASTList.h>
+	"string"
+	"list"
+	<ASTNode.h>
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\blockstmnt.h
+	<ASTNode.h>
+	<ASTList.h>
+	<ASTLeaf.h>
+	"list"
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\ifstmnt.h
+	"ASTNode.h"
+	"ASTList.h"
+	"string"
+	"list"
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\whilestmnt.h
+	"ASTNode.h"
+	"ASTList.h"
+	"string"
+	"list"
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\nullstmnt.h
+	"ASTList.h"
+	"ASTNode.h"
+	"list"
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\returntypeint.h
+	<ReturnType.h>
+
+1580952877 e:\git_workspace\stone_compiler_cplus\include\returntypestring.h
+	<ReturnType.h>
+	<string>
+
+1580952877 source:e:\git_workspace\stone_compiler_cplus\src\astleaf.cpp
+	<string>
+	<Token.h>
+	<ASTNode.h>
+	<list>
+	"ASTLeaf.h"
+
+1580952877 source:e:\git_workspace\stone_compiler_cplus\src\astlist.cpp
+	"ASTList.h"
+	<string>
+	<Token.h>
+	<ASTNode.h>
+	<list>
+
+1580952877 source:e:\git_workspace\stone_compiler_cplus\src\astnode.cpp
+	"ASTNode.h"
+	"string"
+
+1580952877 source:e:\git_workspace\stone_compiler_cplus\src\basicparser.cpp
+	"BasicParser.h"
+	"Token.h"
+	"Parser.h"
+	"ParserDerived.h"
+	<set>
+	<string>
+	"PrimaryExpr.h"
+	"NumberLiteral.h"
+	"Name.h"
+	"StringLiteral.h"
+	"NegativeExpr.h"
+	"BinaryExpr.h"
+	"BlockStmnt.h"
+	"IfStmnt.h"
+	"WhileStmnt.h"
+	"NullStmnt.h"
+	"lexer.h"
+	"list"
+
+1580952877 source:e:\git_workspace\stone_compiler_cplus\src\binaryexpr.cpp
+	"BinaryExpr.h"
+	<ASTNode.h>
+	"derivedTokens.h"
+	<Token.h>
+	<string>
+	"ReturnType.h"
+	"ReturnTypeInt.h"
+	"ReturnTypeString.h"
+	"Name.h"
+	<typeinfo>
+
+1580958456 source:e:\git_workspace\stone_compiler_cplus\src\blockstmnt.cpp
+	"BlockStmnt.h"
+	<typeinfo>
+	"NullStmnt.h"
+
+1580952877 source:e:\git_workspace\stone_compiler_cplus\src\environment.cpp
+	"Environment.h"
+
+1580952877 source:e:\git_workspace\stone_compiler_cplus\src\ifstmnt.cpp
+	"IfStmnt.h"
+	"string"
+	"list"
+	"ReturnType.h"
+	"ReturnTypeInt.h"
+	"ReturnTypeString.h"
+
+1580952877 source:e:\git_workspace\stone_compiler_cplus\src\lexer.cpp
+	"Lexer.h"
+	<string>
+	<list>
+	"Token.h"
+	"LineNumberReader.h"
+	"lexer_one_line.h"
+	"derivedTokens.h"
+	<regex>
+	<exception>
+
+1580952877 source:e:\git_workspace\stone_compiler_cplus\src\lexer_one_line.cpp
+	"lexer_one_line.h"
+	<string>
+	<list>
+	"Token.h"
+	"derivedTokens.h"
+
+1580981502 source:e:\git_workspace\stone_compiler_cplus\src\linenumberreader.cpp
+	"LineNumberReader.h"
+	<fstream>
+	<string>
+
+1580952877 source:e:\git_workspace\stone_compiler_cplus\src\name.cpp
+	"Name.h"
+	<iostream>
+	"derivedTokens.h"
+	<ASTLeaf.h>
+	<string>
+
+1580952877 source:e:\git_workspace\stone_compiler_cplus\src\negativeexpr.cpp
+	"NegativeExpr.h"
+	"ReturnType.h"
+	"ReturnTypeInt.h"
+
+1580952877 source:e:\git_workspace\stone_compiler_cplus\src\nullstmnt.cpp
+	"NullStmnt.h"
+	"list"
+
+1580952877 source:e:\git_workspace\stone_compiler_cplus\src\numberliteral.cpp
+	"NumberLiteral.h"
+	"derivedTokens.h"
+	"ReturnTypeInt.h"
+
+1580952877 source:e:\git_workspace\stone_compiler_cplus\src\ordinary.cpp
+	"ordinary.h"
+
+1580952877 source:e:\git_workspace\stone_compiler_cplus\src\parser.cpp
+	"Parser.h"
+	"ParserClass.h"
+	"lexer.h"
+
+1580974809 source:e:\git_workspace\stone_compiler_cplus\src\primaryexpr.cpp
+	"PrimaryExpr.h"
+
+1580952877 source:e:\git_workspace\stone_compiler_cplus\src\returntype.cpp
+	"ReturnType.h"
+
+1580952877 source:e:\git_workspace\stone_compiler_cplus\src\returntypeint.cpp
+	"ReturnTypeInt.h"
+
+1580952877 source:e:\git_workspace\stone_compiler_cplus\src\returntypestring.cpp
+	"ReturnTypeString.h"
+
+1580952877 source:e:\git_workspace\stone_compiler_cplus\src\stringliteral.cpp
+	"StringLiteral.h"
+	"ReturnTypeString.h"
+
+1580952877 source:e:\git_workspace\stone_compiler_cplus\src\token.cpp
+	"Token.h"
+	"exception"
+	"string"
+
+1580952877 source:e:\git_workspace\stone_compiler_cplus\src\whilestmnt.cpp
+	"WhileStmnt.h"
+	"string"
+	"list"
+	"ReturnType.h"
+	"ReturnTypeInt.h"
+
