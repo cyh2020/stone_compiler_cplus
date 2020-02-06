@@ -1,0 +1,14 @@
+sum = 0
+i = 1
+while i < 10 {
+ sum = sum + i
+ i = i + 1
+}
+sum
+
+if i < 20 {
+ sum
+} else {
+ sum = sum + 1
+}
+sum 
