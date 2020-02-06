@@ -6,7 +6,7 @@ LineNumberReader::LineNumberReader()
 {
     line_no = 0;
     is_open = true;
-    OpenFile.open("./Lexertest.txt");
+    OpenFile.open("./test/Lexertest.txt");
 }
 
 LineNumberReader::~LineNumberReader()
