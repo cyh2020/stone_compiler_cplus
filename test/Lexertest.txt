@@ -1,15 +1,12 @@
-sum = 0
+even = 0
+odd = 0
 i = 1
 while i < 10 {
- sum
- sum = sum + i
- i = i + 1
+	if i % 2 == 0 {
+		even = even + i
+	} else {
+		odd = odd + i
+	}
+	i = i + 1
 }
-sum
-
-if i < 20 {
-  sum = sum + 2
-} else {
- sum = sum + 1
-}
-sum 
+even + odd

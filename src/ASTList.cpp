@@ -4,6 +4,7 @@
 #include <Token.h>
 #include <ASTNode.h>
 #include <list>
+#include <iostream>
 using std::string;
 using std::list;
 
@@ -31,11 +32,16 @@ string ASTList::toString() {
     string builder;
     builder.append("(");
     string sep = "";
+
+    int i = 0;
     for (ASTNode* t: children) {
+        i =  i +1;
+
         builder.append(sep);
         sep = " ";
         builder.append(((ASTList*)t)->toString());
     }
+//    std::cout<<i<<std::endl;
     return builder.append(")");
 }
 

@@ -13,6 +13,7 @@
 #include "NumberLiteral.h"
 #include "Factory.h"
 #include "Token.h"
+#include "BlockStmnt.h"
 using std::list;
 #include "iostream"
 #include "ordinary.h"
@@ -28,6 +29,8 @@ class FactoryDerived:public Factory{
             return new clazz(c);
         }
 };
+
+
 
 template <>
 class FactoryDerived<NumberLiteral>:public Factory{
@@ -57,12 +60,27 @@ class FactoryDerived<StringLiteral>:public Factory{
 };
 
 template <>
+class FactoryDerived<BlockStmnt>:public Factory{
+    public:
+        ASTNode* make(list<ASTNode*> &c){
+//            cout<<c->getText()<<"A BlockStmnt IS MAKING"<<endl;
+
+//            for (list<ASTNode*>::iterator iter=c.begin();iter!=c.end();iter++)
+//            {
+//                cout<< *iter <<endl;
+//            }
+
+            return new BlockStmnt(c);
+        }
+};
+
+template <>
 class FactoryDerived<PrimaryExpr>:public Factory{
     public:
         ASTNode* make(list<ASTNode*> &c){
 //            std::cout<<"A PrimaryExpr IS MAKING"<<std::endl;
 //            if (c.size() != 1){
-//                std::cout<<"hehe"<<std::endl;
+//                std::cout<<"more than one"<<std::endl;
 //            }
 
 

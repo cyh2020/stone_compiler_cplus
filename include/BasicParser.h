@@ -116,6 +116,7 @@ class BasicParser:public Parser
             cout<<"expr   "<<&expr<<endl;
             cout<<"statement0   "<<&statement0<<endl;
             cout<<"block   "<<&block<<endl;
+            cout<<"block_repeat_va   "<<&block_repeat_va<<endl;
             cout<<"simple   "<<&simple<<endl;
             cout<<"statement   "<<&statement<<endl;
             cout<<"ifs   "<<&ifs<<endl;

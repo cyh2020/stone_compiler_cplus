@@ -26,10 +26,9 @@ ASTNode* Parser::parse(Lexer* Lexer_r) {
 //    std::cout<<elements.size()<<this<<std::endl;
     int i = 0;
     for (Element* e: elements){//给element去做
-//        std::cout<<"          "<<i<<std::endl;
-//        std::cout<<elements.size()<<"   "<<results.size()<<"   "<<this<<std::endl;
         i++;
         e->parse(Lexer_r, results);
     }
+//    std::cout<<this<<"          "<<results.size()<<std::endl;
     return factory->make(results);//回头敲一下再上传
 };

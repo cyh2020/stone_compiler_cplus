@@ -121,7 +121,8 @@ public:
         void parse(Lexer*  lexer_r, list<ASTNode*>& res) {
             while (rparser->match(lexer_r)) {
                 ASTNode* t = rparser->parse(lexer_r);
-                if (t->numChildren() > 0)
+                //is a Name Terminal or has children
+                if (typeid(*t) != typeid(ASTList) || (t->numChildren() > 0))
                     res.push_back(t);
                 if (onlyOnce)
                     break;
@@ -339,6 +340,7 @@ public:
             }
 
             res.push_back(right);
+
 //            //some is Name
 //            cout<<"right in Expr parse "<< (typeid(*right) == typeid(Name)) <<endl;
 //            //some is Binary
