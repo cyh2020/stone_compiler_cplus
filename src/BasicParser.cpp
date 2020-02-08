@@ -22,6 +22,9 @@ using std::list;
 using std::string;
 
 
+//!!!!!!!!!!!!!!!!!!!!!!!Parsers must be declared in .h file !!!!!!!!!!!!!!!
+
+
 BasicParser::BasicParser()
 {
     reserved.insert(";");

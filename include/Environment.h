@@ -14,14 +14,14 @@ class Environment
     public:
         Environment();
         virtual ~Environment();
-        void put(string name, ReturnType* value);
-        ReturnType* get(string name);
+        virtual void put(string name,ReturnType* value);
+        virtual void putNew(string name,ReturnType* value);
+        virtual ReturnType* get(string name);
 
 
     protected:
 
     private:
-        map<string,ReturnType*> values;
 };
 
 #endif // ENVIRONMENT_H

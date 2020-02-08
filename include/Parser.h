@@ -22,17 +22,25 @@ using std::string;
 using std::cout;
 using std::endl;
 
+
+//!!!!!!!!!!!!!!!!!!!!!!!Parsers must be declared in .h file !!!!!!!!!!!!!!!
+
 class Parser {
 public:
     void printMyself(){
-        cout<<"{"<<endl;
-        cout<<this<<"  "<<elements.size()<<endl;
-        for(Element* e : elements){
-            cout<<"("<<endl;
-            e->printMyself();
-            cout<<")"<<endl;
+//        cout<<"{"<<endl;
+
+        if (this == (void*)(0x96fdbc)){//block address avoid repeat print
+            cout<<this<<" block  ("<<elements.size()<<")";
+        }else{
+            cout<<this<<"  ("<<elements.size()<<")";
+            cout<<"{"<<endl;
+            for(Element* e : elements){
+                e->printMyself();
+                cout<<";"<<endl;
+            }
+            cout<<"}"<<endl;
         }
-        cout<<"}"<<endl;
     }
 
     class Element {
@@ -103,9 +111,12 @@ public:
 
         void printMyself(){
             cout<<this<<"  "<<"ORTREE"<<"  "<<parsers.size()<<endl;
+            cout<<"{"<<endl;
             for(Parser*p : parsers){
                 p->printMyself();
+                cout<<";"<<endl;
             }
+            cout<<"}"<<endl;
         }
     };
 
@@ -318,7 +329,7 @@ public:
     public:
         void printMyself(){
             cout<<this<<"  "<<"Expr"<<endl;
-            Expr::factor->printMyself();
+//            Expr::factor->printMyself();
         }
 
         const Precedence prec_null;//the prec when no matching one returned
@@ -406,6 +417,11 @@ public:
 public:
     Parser();//construction function
 
+    Parser(Parser* p){
+        factory = p->factory;
+        elements = p->elements;
+    }
+
     ASTNode* parse(Lexer* lexer_r);
 
     bool match(Lexer* lexer_r);
@@ -419,6 +435,10 @@ public:
         elements.push_back(new Parser::NumToken<clazz>);
     };
 
+
+//    void identifier(set<string> &reserved) {//some bug here
+//        elements.push_back(new Parser::IdToken<AST>(reserved));
+//    }
 
     template <typename clazz>
     void identifier(set<string> &reserved) {
@@ -448,12 +468,17 @@ public:
         elements.push_back(new OrTree(p));
     }
 
-//    Parser maybe(Parser p) {
-//        Parser p2 = new Parser(p);
-//        p2.reset();
-//        elements.push_back(new OrTree(new Parser[] { p, p2 }));
-//        return this;
-//    }
+    void maybe(Parser* p) {
+        Parser* p2 = new Parser(p);
+
+        list<Element*> null_list;
+        p2->elements = null_list;
+
+        list<Parser*> to_add;
+        to_add.push_back(p);
+        to_add.push_back(p2);
+        elements.push_back(new OrTree(to_add));
+    }
 
     void option(Parser* p) {//some thing can be run only once
         elements.push_back(new Repeat(p, true));
@@ -467,6 +492,17 @@ public:
         elements.push_back(new Expr<clazz>(subexp, operators));
     };
 
+    void insertChoice(Parser* p) {
+        Element* e = elements.front();
+
+        if (typeid(*e) == typeid(OrTree))
+            ((OrTree*)e)->insert(p);
+//        else {
+//            Parser otherwise = new Parser(this);
+//            reset(null);
+//            or(p, otherwise);
+//        }
+    }
 
 };
 

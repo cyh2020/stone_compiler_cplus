@@ -2,11 +2,11 @@
 #include <fstream>
 #include <string>
 
-LineNumberReader::LineNumberReader()
+LineNumberReader::LineNumberReader(std::string file_location):file_path(file_location)
 {
     line_no = 0;
     is_open = true;
-    OpenFile.open("./test/Lexertest.txt");
+    OpenFile.open(file_path);
 }
 
 LineNumberReader::~LineNumberReader()
@@ -15,7 +15,8 @@ LineNumberReader::~LineNumberReader()
 }
 
 std::string LineNumberReader::getstr(){
-    OpenFile.getline(chr_out,20);
+    //attention this 80 , also in h file;
+    OpenFile.getline(chr_out,80);
     str_out = chr_out;
     line_no ++;
 

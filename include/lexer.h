@@ -11,7 +11,7 @@ using std::string;
 
 class Lexer{
     public:
-        Lexer();
+        Lexer(string file_location);
         virtual ~Lexer();
         void readLine();
         list<Token*> qlist;//用token指针的原因是因为要向上造型

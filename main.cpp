@@ -7,12 +7,13 @@
 #include "lexer.h"
 #include "LineNumberReader.h"
 #include <regex>
-#include "template/TSum.h"
 #include "Parser.h"
 #include "BasicParser.h"
 #include"ReturnType.h"
 #include"ReturnTypeInt.h"
 #include"ReturnTypeString.h"
+#include "FunctionParser.h"
+#include "BasicEnv.h"
 
 using namespace std;
 
@@ -35,7 +36,7 @@ int main()
 
 
 ////Lexer
-//    Lexer le;
+//    Lexer le("./test/Lexertest.txt");
 //    le.readLine();
 //
 //    for (Token* t; (t = le.read()) != Token::EOF_S; ){
@@ -46,7 +47,7 @@ int main()
 
 ////BP
 //	BasicParser bp;
-//    Lexer le;
+//    Lexer le("./test/Lexertest.txt");
 //
 //    bp.print_BP_ele();
 ////    bp.program.printMyself();
@@ -59,10 +60,10 @@ int main()
 
 //BP
 	BasicParser bp;
-    Lexer le;
+    Lexer le("./test/Lexer.txt");
 
     bp.print_BP_ele();
-    Environment env;
+    BasicEnv env;
 
     while (le.peek(0) != Token::EOF_S) {
         ASTNode* ast = bp.beginparse(&le);
@@ -77,9 +78,35 @@ int main()
                 }else{
                     cout << "=> other" << endl;
                 }
-
             }
     }
+
+
+//
+////Lexer-Function Test
+//    Lexer le("./test/Lexertest.txt");
+//    le.readLine();
+//
+//    for (Token* t; (t = le.read()) != Token::EOF_S; ){
+//        cout<<"=> "<<t->getText()<<endl;
+//    }
+
+
+////Function Parser
+//	FunctionParser fp;
+//    Lexer le("./test/Lexertest.txt");
+//
+//    fp.print_BP_ele();
+////    fp.block.printMyself();
+//
+//    //change the address before you print,confirm twice to avoid death loop
+////    fp.expr.printMyself();
+////    fp.program.printMyself();
+//
+//    while (le.peek(0) != Token::EOF_S) {
+//        ASTNode* ast = fp.beginparse(&le);
+//        cout<<string("=> ") + ast->toString()<<endl;
+//    }
 
 
 }

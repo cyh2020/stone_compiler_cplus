@@ -9,7 +9,7 @@
 
 class LineNumberReader{
     public:
-        LineNumberReader();
+        LineNumberReader( std::string s );
         virtual ~LineNumberReader();
 
         std::string getstr();
@@ -17,8 +17,9 @@ class LineNumberReader{
         bool is_open;
 
     private:
+        std::string file_path;
         std::ifstream OpenFile;
-        char chr_out[20];
+        char chr_out[80];
         std::string str_out;
         int line_no;
 };

@@ -126,7 +126,7 @@ class BasicParser:public Parser
             cout<<"primary_identifier   "<<&primary_identifier<<endl;
             cout<<"primary_str_ing   "<<&primary_str_ing<<endl;
             cout<<"nulls   "<<&nulls<<endl;
-            cout<<"！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！"<<endl;
+            cout<<"--------------------------------------------------------------------"<<endl;
         }
 
 

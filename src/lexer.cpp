@@ -3,7 +3,7 @@
 #include <list>
 #include "Token.h"
 #include "LineNumberReader.h"
-#include "lexer_one_line.h"
+
 #include "derivedTokens.h"
 #include<regex>
 
@@ -11,10 +11,8 @@
 using std::string;
 
 
-Lexer::Lexer(){
+Lexer::Lexer(string file_location):reader(file_location){
     hasMore = true;
-    list<Token*> qlist;
-    LineNumberReader reader;
 }
 
 Lexer::~Lexer(){
@@ -31,6 +29,15 @@ void Lexer::readLine(){
     //文本数据
 //    line_string = "int a = 5";
     //正则表达式
+    //       "\s*(
+    //       (//.*)
+    //     |([0-9]+)
+    //     |( \"   (    \\"    |    \\\\    |  \\n   |  [^"]   )   *")
+    //     |[A-Za-z][A-Za-z0-9]*
+    //     |   ==   |   <=   |   >=    |  \   |       \|
+    //     |&&|[[:punct:]]
+    //      )+";
+
     string regexPat= "\\s*((//.*)|([0-9]+)|(\"(\\\\\"|\\\\\\\\|\\\\n|[^\"])*\")|[A-Za-z][A-Za-z0-9]*|==|<=|>=|\\|\\||&&|[[:punct:]])+";
     std::regex pattern1(regexPat,std::regex::icase);
 
@@ -41,11 +48,12 @@ void Lexer::readLine(){
     //储存结果
     std::smatch result;
     //正则查找并加入token
+//    std::cout<<line_string<<std::endl;
     while (std::regex_search(iter,iterEnd,result,pattern1))
     {
         temp=result[0];
 //        std::cout<<temp<<std::endl;
-//        std::cout<<result[0]<<'^'<<result[1]<<'^'<<result[2] <<'^'<<result[3]<<'^'<<result[4]<<std::endl;
+//        std::cout<<"____________"<<result[0]<<'^'<<result[1]<<'^'<<result[2] <<'^'<<result[3]<<'^'<<result[4]<<std::endl;
         //addToken;
 
             string m = result[1];//string found

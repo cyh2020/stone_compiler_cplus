@@ -693,7 +693,7 @@
 	"ReturnType.h"
 	"ReturnTypeInt.h"
 
-1581038751 source:e:\git_workspace\stone_compiler_cplus\main.cpp
+1581165308 source:e:\git_workspace\stone_compiler_cplus\main.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -703,12 +703,13 @@
 	"lexer.h"
 	"LineNumberReader.h"
 	<regex>
-	"template/TSum.h"
 	"Parser.h"
 	"BasicParser.h"
 	"ReturnType.h"
 	"ReturnTypeInt.h"
 	"ReturnTypeString.h"
+	"FunctionParser.h"
+	"BasicEnv.h"
 
 1580952877 e:\git_workspace\stone_compiler_cplus\include\token.h
 	<string>
@@ -718,7 +719,7 @@
 	<string>
 	<sstream>
 
-1580952877 e:\git_workspace\stone_compiler_cplus\include\lexer.h
+1581164751 e:\git_workspace\stone_compiler_cplus\include\lexer.h
 	"lexer_one_line.h"
 	"Token.h"
 	"LineNumberReader.h"
@@ -731,14 +732,14 @@
 	"Token.h"
 	"derivedTokens.h"
 
-1580952877 e:\git_workspace\stone_compiler_cplus\include\linenumberreader.h
+1581165200 e:\git_workspace\stone_compiler_cplus\include\linenumberreader.h
 	<iostream>
 	<fstream>
 	<string>
 
 1580952877 e:\git_workspace\stone_compiler_cplus\include\template\tsum.h
 
-1581038560 e:\git_workspace\stone_compiler_cplus\include\parser.h
+1581153891 e:\git_workspace\stone_compiler_cplus\include\parser.h
 	<map>
 	<string>
 	<set>
@@ -759,7 +760,7 @@
 	"Environment.h"
 	"ReturnType.h"
 
-1580952877 e:\git_workspace\stone_compiler_cplus\include\environment.h
+1581129918 e:\git_workspace\stone_compiler_cplus\include\environment.h
 	<map>
 	<string>
 	"ReturnType.h"
@@ -839,7 +840,7 @@
 	<string>
 	"ReturnType.h"
 
-1580994735 e:\git_workspace\stone_compiler_cplus\include\basicparser.h
+1581130678 e:\git_workspace\stone_compiler_cplus\include\basicparser.h
 	"lexer.h"
 	<Parser.h>
 	<ParserDerived.h>
@@ -914,7 +915,7 @@
 	"ASTNode.h"
 	"string"
 
-1580952877 source:e:\git_workspace\stone_compiler_cplus\src\basicparser.cpp
+1581149620 source:e:\git_workspace\stone_compiler_cplus\src\basicparser.cpp
 	"BasicParser.h"
 	"Token.h"
 	"Parser.h"
@@ -951,8 +952,9 @@
 	<typeinfo>
 	"NullStmnt.h"
 
-1580952877 source:e:\git_workspace\stone_compiler_cplus\src\environment.cpp
+1581130055 source:e:\git_workspace\stone_compiler_cplus\src\environment.cpp
 	"Environment.h"
+	<iostream>
 
 1580952877 source:e:\git_workspace\stone_compiler_cplus\src\ifstmnt.cpp
 	"IfStmnt.h"
@@ -962,13 +964,12 @@
 	"ReturnTypeInt.h"
 	"ReturnTypeString.h"
 
-1580952877 source:e:\git_workspace\stone_compiler_cplus\src\lexer.cpp
+1581164710 source:e:\git_workspace\stone_compiler_cplus\src\lexer.cpp
 	"Lexer.h"
 	<string>
 	<list>
 	"Token.h"
 	"LineNumberReader.h"
-	"lexer_one_line.h"
 	"derivedTokens.h"
 	<regex>
 	<exception>
@@ -980,7 +981,7 @@
 	"Token.h"
 	"derivedTokens.h"
 
-1580981502 source:e:\git_workspace\stone_compiler_cplus\src\linenumberreader.cpp
+1581165221 source:e:\git_workspace\stone_compiler_cplus\src\linenumberreader.cpp
 	"LineNumberReader.h"
 	<fstream>
 	<string>
@@ -1041,4 +1042,80 @@
 	"list"
 	"ReturnType.h"
 	"ReturnTypeInt.h"
+
+1581149671 e:\git_workspace\stone_compiler_cplus\include\functionparser.h
+	<BasicParser.h>
+	<ParserDerived.h>
+	"Parser.h"
+	"Arguments.h"
+	"DefStmnt.h"
+
+1581058599 e:\git_workspace\stone_compiler_cplus\include\arguments.h
+	<Postfix.h>
+	<ASTList.h>
+	<ASTNode.h>
+	<string>
+
+1581046962 e:\git_workspace\stone_compiler_cplus\include\postfix.h
+	<ASTList.h>
+	<ASTNode.h>
+	<string>
+
+1581046758 e:\git_workspace\stone_compiler_cplus\include\defstmnt.h
+	"ASTList.h"
+	"ASTNode.h"
+	"list"
+	"ParameterList.h"
+	"BlockStmnt.h"
+
+1581042542 e:\git_workspace\stone_compiler_cplus\include\parameterlist.h
+	"ASTList.h"
+	"ASTNode.h"
+	<list>
+	<string>
+
+1581058598 source:e:\git_workspace\stone_compiler_cplus\src\arguments.cpp
+	"Arguments.h"
+
+1581059380 source:e:\git_workspace\stone_compiler_cplus\src\defstmnt.cpp
+	"DefStmnt.h"
+
+1581061464 source:e:\git_workspace\stone_compiler_cplus\src\function.cpp
+	"Function.h"
+
+1581061382 e:\git_workspace\stone_compiler_cplus\include\function.h
+	"Environment.h"
+	"BlockStmnt.h"
+	"ParameterList.h"
+	<string>
+	"NestedEnv.h"
+
+1581129133 e:\git_workspace\stone_compiler_cplus\include\nestedenv.h
+	<Environment.h>
+	<map>
+	<string>
+	"ReturnType.h"
+
+1581154077 source:e:\git_workspace\stone_compiler_cplus\src\functionparser.cpp
+	"FunctionParser.h"
+	"Parser.h"
+
+1581129881 source:e:\git_workspace\stone_compiler_cplus\src\nestedenv.cpp
+	"NestedEnv.h"
+
+1581064652 source:e:\git_workspace\stone_compiler_cplus\src\parameterlist.cpp
+	"ParameterList.h"
+	"ASTLeaf.h"
+
+1581046930 source:e:\git_workspace\stone_compiler_cplus\src\postfix.cpp
+	"Postfix.h"
+
+1581129667 source:e:\git_workspace\stone_compiler_cplus\src\basicenv.cpp
+	"BasicEnv.h"
+
+1581130103 e:\git_workspace\stone_compiler_cplus\include\basicenv.h
+	<Environment.h>
+	<map>
+	<string>
+	"ReturnType.h"
 
