@@ -12,7 +12,7 @@ using std::string;
 class Function:public ReturnType
 {
     public:
-        Function(ParameterList parameters, BlockStmnt body, Environment env);
+        Function(ParameterList parameters, BlockStmnt body, Environment &env);
         virtual ~Function();
 
         ParameterList* get_parameters();
@@ -23,7 +23,7 @@ class Function:public ReturnType
     protected:
         ParameterList parameters;
         BlockStmnt body;
-        Environment env;
+        Environment* env;
 
     private:
 };

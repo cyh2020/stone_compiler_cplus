@@ -1,8 +1,14 @@
 #include "NestedEnv.h"
-NestedEnv::NestedEnv(Environment &e)
+#include <iostream>
+#include "BasicEnv.h"
+using std::cout;
+using std::endl;
+
+NestedEnv::NestedEnv(Environment* e)
 {
     //ctor
-    this->outer = &e;
+//    cout<<"in NestedEnv creator"<<e<<endl;
+    this->outer = e;
 }
 
 NestedEnv::~NestedEnv()
@@ -18,7 +24,8 @@ ReturnType* NestedEnv::get(string name) {
         return m->second;//return second key-value
     }else{
         if (outer != nullptr){//outer env
-            return outer->get(name);
+//            cout<<this<<"---->"<<outer<<endl;
+            return ((BasicEnv*)outer)->get(name);
         }else{
             return nullptr;
         }

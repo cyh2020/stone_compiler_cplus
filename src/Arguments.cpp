@@ -27,7 +27,7 @@ ReturnType* Arguments::eval(Environment &callerEnv, ReturnType* value) {
             if (Arguments::size() != params->size())
                 throw "bad number of arguments";
 
-            Environment* newEnv = func->get_Env();//prepare env and exec the func
+            NestedEnv* newEnv = (NestedEnv*)func->get_Env();//prepare env and exec the func
             int num = 0;
             for (ASTNode* a: this->children){
                 params->eval(*newEnv, num++, a->eval(callerEnv));
@@ -36,6 +36,6 @@ ReturnType* Arguments::eval(Environment &callerEnv, ReturnType* value) {
 
             ReturnType* r = (func->get_body())->eval(*newEnv);
 
-            cout<<((ReturnTypeInt*)r)->returnVal()<<endl;
+//            cout<<((ReturnTypeInt*)r)->returnVal()<<endl;
             return r;
         }

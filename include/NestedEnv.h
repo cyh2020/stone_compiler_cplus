@@ -14,7 +14,7 @@ using std::string;
 class NestedEnv : public Environment
 {
     public:
-        NestedEnv(Environment &e);
+        NestedEnv(Environment* e);
         virtual ~NestedEnv();
 
 

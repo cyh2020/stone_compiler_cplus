@@ -16,7 +16,9 @@ class Environment
         virtual ~Environment();
         virtual void put(string name,ReturnType* value);
         virtual void putNew(string name,ReturnType* value);
-        virtual ReturnType* get(string name);
+        virtual ReturnType* get(string name){
+            throw "Environment interface dont have get method";
+        };
 
 
     protected:

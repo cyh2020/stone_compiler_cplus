@@ -21,10 +21,6 @@ void Environment::put(string name, ReturnType* value) {
 
 }
 
-ReturnType* Environment::get(string name) {
-    return nullptr;
-}
-
 void Environment::putNew(string name,ReturnType* value){
     cout<<"env has no putNew"<<endl;
 }
