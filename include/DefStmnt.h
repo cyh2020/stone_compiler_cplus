@@ -7,6 +7,12 @@
 #include "ParameterList.h"
 #include "BlockStmnt.h"
 
+#include "ReturnType.h"
+#include "ReturnTypeString.h"
+#include "Function.h"
+#include "Environment.h"
+
+
 using std::list;
 
 class DefStmnt:public ASTList
@@ -16,10 +22,12 @@ class DefStmnt:public ASTList
         virtual ~DefStmnt();
 
 
-    string name();
-    ParameterList* parameters();
-    BlockStmnt* body();
-    string toString();
+        string name();
+        ParameterList* parameters();
+        BlockStmnt* body();
+        string toString();
+
+        ReturnType* eval(Environment &env);
 
 
     protected:

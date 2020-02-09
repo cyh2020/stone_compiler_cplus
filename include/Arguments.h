@@ -5,6 +5,10 @@
 #include <ASTList.h>
 #include <ASTNode.h>
 #include <string>
+#include <typeinfo>
+#include "ReturnType.h"
+#include "Function.h"
+#include "ParameterList.h"
 using std::string;
 
 class Arguments : public Postfix
@@ -15,9 +19,13 @@ class Arguments : public Postfix
 
         int size();
 
+        ReturnType* eval(Environment &callerEnv, ReturnType* value);
+
     protected:
 
     private:
 };
+
+
 
 #endif // ARGUMENTS_H

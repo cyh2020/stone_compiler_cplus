@@ -32,3 +32,10 @@ string DefStmnt::toString() {
     return "(def " + name() + ")";
 
 }
+
+ReturnType* DefStmnt::eval(Environment &env) {//add function to env and return its name
+        env.putNew(this->name(), new Function(*(parameters()), *(body()), env));
+
+        ReturnTypeString* a = new ReturnTypeString(this->name());
+        return a;
+    }

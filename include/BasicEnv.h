@@ -18,6 +18,7 @@ class BasicEnv : public Environment
         BasicEnv();
         virtual ~BasicEnv();
         void put(string name, ReturnType* value);
+        void putNew(string name,ReturnType* value);
         ReturnType* get(string name);
 
 

@@ -693,7 +693,7 @@
 	"ReturnType.h"
 	"ReturnTypeInt.h"
 
-1581215662 source:e:\git_workspace\stone_compiler_cplus\main.cpp
+1581238267 source:e:\git_workspace\stone_compiler_cplus\main.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -792,14 +792,16 @@
 	<list>
 	"PrimaryExpr.h"
 
-1580985874 e:\git_workspace\stone_compiler_cplus\include\primaryexpr.h
+1581240191 e:\git_workspace\stone_compiler_cplus\include\primaryexpr.h
 	<ASTNode.h>
 	<ASTList.h>
 	<list>
+	"Postfix.h"
+	"ReturnType.h"
 	"ReturnType.h"
 	"Environment.h"
 
-1581038860 e:\git_workspace\stone_compiler_cplus\include\factoryderived.h
+1581239836 e:\git_workspace\stone_compiler_cplus\include\factoryderived.h
 	<list>
 	<ASTNode.h>
 	"PrimaryExpr.h"
@@ -1015,7 +1017,7 @@
 	"ParserClass.h"
 	"lexer.h"
 
-1580985877 source:e:\git_workspace\stone_compiler_cplus\src\primaryexpr.cpp
+1581240173 source:e:\git_workspace\stone_compiler_cplus\src\primaryexpr.cpp
 	"PrimaryExpr.h"
 
 1580952877 source:e:\git_workspace\stone_compiler_cplus\src\returntype.cpp
@@ -1050,45 +1052,59 @@
 	"Arguments.h"
 	"DefStmnt.h"
 
-1581058599 e:\git_workspace\stone_compiler_cplus\include\arguments.h
+1581233014 e:\git_workspace\stone_compiler_cplus\include\arguments.h
 	<Postfix.h>
 	<ASTList.h>
 	<ASTNode.h>
 	<string>
+	<typeinfo>
+	"ReturnType.h"
+	"Function.h"
+	"ParameterList.h"
 
-1581046962 e:\git_workspace\stone_compiler_cplus\include\postfix.h
+1581228370 e:\git_workspace\stone_compiler_cplus\include\postfix.h
 	<ASTList.h>
 	<ASTNode.h>
 	<string>
+	"ReturnType.h"
 
-1581046758 e:\git_workspace\stone_compiler_cplus\include\defstmnt.h
+1581233805 e:\git_workspace\stone_compiler_cplus\include\defstmnt.h
 	"ASTList.h"
 	"ASTNode.h"
 	"list"
 	"ParameterList.h"
 	"BlockStmnt.h"
+	"ReturnType.h"
+	"ReturnTypeString.h"
+	"Function.h"
+	"Environment.h"
 
-1581042542 e:\git_workspace\stone_compiler_cplus\include\parameterlist.h
+1581233349 e:\git_workspace\stone_compiler_cplus\include\parameterlist.h
 	"ASTList.h"
 	"ASTNode.h"
 	<list>
 	<string>
+	"ReturnType.h"
+	"Environment.h"
 
-1581058598 source:e:\git_workspace\stone_compiler_cplus\src\arguments.cpp
+1581241566 source:e:\git_workspace\stone_compiler_cplus\src\arguments.cpp
 	"Arguments.h"
+	"ReturnTypeInt.h"
+	<iostream>
 
-1581217509 source:e:\git_workspace\stone_compiler_cplus\src\defstmnt.cpp
+1581233835 source:e:\git_workspace\stone_compiler_cplus\src\defstmnt.cpp
 	"DefStmnt.h"
 
-1581061464 source:e:\git_workspace\stone_compiler_cplus\src\function.cpp
+1581233633 source:e:\git_workspace\stone_compiler_cplus\src\function.cpp
 	"Function.h"
 
-1581061382 e:\git_workspace\stone_compiler_cplus\include\function.h
+1581229597 e:\git_workspace\stone_compiler_cplus\include\function.h
 	"Environment.h"
 	"BlockStmnt.h"
 	"ParameterList.h"
 	<string>
 	"NestedEnv.h"
+	"ReturnType.h"
 
 1581129133 e:\git_workspace\stone_compiler_cplus\include\nestedenv.h
 	<Environment.h>
@@ -1103,17 +1119,17 @@
 1581129881 source:e:\git_workspace\stone_compiler_cplus\src\nestedenv.cpp
 	"NestedEnv.h"
 
-1581064652 source:e:\git_workspace\stone_compiler_cplus\src\parameterlist.cpp
+1581233849 source:e:\git_workspace\stone_compiler_cplus\src\parameterlist.cpp
 	"ParameterList.h"
 	"ASTLeaf.h"
 
 1581046930 source:e:\git_workspace\stone_compiler_cplus\src\postfix.cpp
 	"Postfix.h"
 
-1581129667 source:e:\git_workspace\stone_compiler_cplus\src\basicenv.cpp
+1581235907 source:e:\git_workspace\stone_compiler_cplus\src\basicenv.cpp
 	"BasicEnv.h"
 
-1581130103 e:\git_workspace\stone_compiler_cplus\include\basicenv.h
+1581235849 e:\git_workspace\stone_compiler_cplus\include\basicenv.h
 	<Environment.h>
 	<map>
 	<string>

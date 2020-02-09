@@ -5,10 +5,11 @@
 #include "ParameterList.h"
 #include <string>
 #include "NestedEnv.h"
+#include "ReturnType.h"
 using std::string;
 
 
-class Function
+class Function:public ReturnType
 {
     public:
         Function(ParameterList parameters, BlockStmnt body, Environment env);

@@ -17,10 +17,21 @@ PrimaryExpr::~PrimaryExpr()
 //    }
 
 
-ReturnType* PrimaryExpr::eval(Environment& env) {
-        ReturnType* result = nullptr;
-            for (ASTNode* t: this->children) {//only one child
-                    result = t->eval(env);
-            }
-            return result;
+ASTNode* PrimaryExpr::operand() { return child(0); }
+Postfix* PrimaryExpr::postfix(int nest) {
+        return (Postfix*)child(numChildren() - nest - 1);
+    }
+
+bool PrimaryExpr::hasPostfix(int nest) { return numChildren() - nest > 1; }
+ReturnType* PrimaryExpr::eval(Environment &env) {
+    return evalSubExpr(env, 0);
+}
+
+ReturnType* PrimaryExpr::evalSubExpr(Environment &env, int nest) {
+    if (hasPostfix(nest)) {//like func(10)
+        ReturnType* target = evalSubExpr(env, nest + 1);
+        return (postfix(nest))->eval(env, target);
+    }
+    else
+        return (operand())->eval(env);//like func()
 }

@@ -79,9 +79,9 @@ class FactoryDerived<PrimaryExpr>:public Factory{
     public:
         ASTNode* make(list<ASTNode*> &c){
 //            std::cout<<"A PrimaryExpr IS MAKING"<<std::endl;
-//            if (c.size() != 1){
-//                std::cout<<"more than one"<<std::endl;
-//            }
+            if (c.size() != 1){
+                std::cout<<"more than one"<<std::endl;
+            }
 
 
             return (c.size() == 1) ? c.front() : new PrimaryExpr(c);

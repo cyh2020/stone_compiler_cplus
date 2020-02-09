@@ -82,16 +82,6 @@ int main()
 //    }
 
 
-//
-////Lexer-Function Test
-//    Lexer le("./test/Lexertest.txt");
-//    le.readLine();
-//
-//    for (Token* t; (t = le.read()) != Token::EOF_S; ){
-//        cout<<"=> "<<t->getText()<<endl;
-//    }
-
-
 //Function Parser
 	FunctionParser fp;
     Lexer le("./test/Lexertest.txt");
@@ -102,10 +92,21 @@ int main()
     //change the address before you print,confirm twice to avoid death loop
 //    fp.expr.printMyself();
 //    fp.program.printMyself();
-
+    BasicEnv env;
     while (le.peek(0) != Token::EOF_S) {
         ASTNode* ast = fp.beginparse(&le);
-        cout<<string("=> ") + ast->toString()<<endl;
+            if (!(typeid(*ast) == typeid(NullStmnt))) {
+                ReturnType* r = ast->eval(env);
+                if(!r){
+                    cout << "=> nullptr" << endl;
+                }else if (r->returnValType() == "int"){
+                    cout << "=> " << ((ReturnTypeInt*)r)->returnVal() << endl;
+                }else if (r->returnValType() == "string"){
+                    cout << "=> " << ((ReturnTypeString*)r)->returnVal() << endl;
+                }else{
+                    cout << "=> other" << endl;
+                }
+            }
     }
 
 

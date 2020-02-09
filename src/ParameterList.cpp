@@ -14,3 +14,7 @@ ParameterList::~ParameterList()
 
 string ParameterList::name(int i) { return ((Token*) ((ASTLeaf*) child(i))->get_token())->getText(); }
 int ParameterList::size() { return ASTList::numChildren(); }
+
+void ParameterList::eval(Environment &env, int index, ReturnType* value) {
+            env.putNew(ParameterList::name(index), value);//add value to env
+        }

@@ -7,7 +7,8 @@
 
 using std::list;
 using std::string;
-
+#include "ReturnType.h"
+#include "Environment.h"
 
 class ParameterList:public ASTList
 {
@@ -17,6 +18,7 @@ class ParameterList:public ASTList
 
         string name(int i);
         int size();
+        void eval(Environment &env, int index, ReturnType* value);
 
     protected:
 

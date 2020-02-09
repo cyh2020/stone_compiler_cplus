@@ -4,6 +4,8 @@
 #include<ASTNode.h>
 #include<ASTList.h>
 #include<list>
+#include "Postfix.h"
+#include "ReturnType.h"
 
 #include "ReturnType.h"
 #include "Environment.h"
@@ -14,8 +16,12 @@ class PrimaryExpr : public ASTList{
         PrimaryExpr(list<ASTNode*> c);
         virtual ~PrimaryExpr();
 
-//        ASTNode* create(list<ASTNode*> c);
-        ReturnType* eval(Environment& env);
+        //like func();
+        ASTNode* operand();
+        Postfix* postfix(int nest);
+        bool hasPostfix(int nest);
+        ReturnType* eval(Environment &env);
+        ReturnType* evalSubExpr(Environment &env, int nest);
 
 };
 
