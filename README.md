@@ -1,5 +1,7 @@
 # stone_compiler_cplus
 stone_compiler c++ version converted from java
+java version code is from the book 两周自制脚本语言 by Prof 千叶滋
+big thanks to him ！
 
 ## 0.4  整体debug时候注意
 0.2的bug已经修复，function的bug已经修复，原因是因为在parser下的expr 下的next op 不识别 “）”
