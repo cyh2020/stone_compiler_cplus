@@ -29,6 +29,6 @@ BlockStmnt* DefStmnt::body() {
 
 string DefStmnt::toString() {
 //    return "(def " + name() + " " + parameters() + " " + body() + ")";
-    return "(def " + name();
+    return "(def " + name() + ")";
 
 }

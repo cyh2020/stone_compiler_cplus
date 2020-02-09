@@ -693,7 +693,7 @@
 	"ReturnType.h"
 	"ReturnTypeInt.h"
 
-1581165308 source:e:\git_workspace\stone_compiler_cplus\main.cpp
+1581215662 source:e:\git_workspace\stone_compiler_cplus\main.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -739,7 +739,7 @@
 
 1580952877 e:\git_workspace\stone_compiler_cplus\include\template\tsum.h
 
-1581153891 e:\git_workspace\stone_compiler_cplus\include\parser.h
+1581216317 e:\git_workspace\stone_compiler_cplus\include\parser.h
 	<map>
 	<string>
 	<set>
@@ -1010,7 +1010,7 @@
 1580952877 source:e:\git_workspace\stone_compiler_cplus\src\ordinary.cpp
 	"ordinary.h"
 
-1581038529 source:e:\git_workspace\stone_compiler_cplus\src\parser.cpp
+1581217613 source:e:\git_workspace\stone_compiler_cplus\src\parser.cpp
 	"Parser.h"
 	"ParserClass.h"
 	"lexer.h"
@@ -1077,7 +1077,7 @@
 1581058598 source:e:\git_workspace\stone_compiler_cplus\src\arguments.cpp
 	"Arguments.h"
 
-1581059380 source:e:\git_workspace\stone_compiler_cplus\src\defstmnt.cpp
+1581217509 source:e:\git_workspace\stone_compiler_cplus\src\defstmnt.cpp
 	"DefStmnt.h"
 
 1581061464 source:e:\git_workspace\stone_compiler_cplus\src\function.cpp

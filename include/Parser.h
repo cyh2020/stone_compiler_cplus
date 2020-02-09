@@ -391,6 +391,9 @@ public:
                 else if( cp.compare("{")== 0 ){
                     return Expr::prec_null;
                 }
+                else if( cp.compare(")")== 0 ){
+                    return Expr::prec_null;
+                }
                 else return Expr::ops.get(t->getText());
             }
             else
